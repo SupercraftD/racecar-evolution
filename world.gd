@@ -60,9 +60,10 @@ func _on_button_pressed():
 			elif car.laps > 0:
 				if mostfit.laps == 0:
 					mostfit = car
+					$CanvasLayer/Label3.text = "Best lap: "+str(mostfit.bestlap)
 				elif car.bestlap < mostfit.bestlap:
 					mostfit = car
-				$CanvasLayer/Label3.text = "Best lap: "+str(mostfit.bestlap)
+					$CanvasLayer/Label3.text = "Best lap: "+str(mostfit.bestlap)
 			elif car.passed_checkpt:
 				if not mostfit.passed_checkpt:
 					mostfit = car
