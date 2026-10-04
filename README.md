@@ -1,7 +1,7 @@
 # Racecar Evolution
 Genetic evolution algorithm to train 2D race cars to complete a race track in Godot 4.
 
-<video src="demo.mp4" autoplay loop muted playsinline width="50%" ></video>
+https://github.com/user-attachments/assets/6fa9c554-e5ef-4e7f-8e70-b90866273c6a
 
 ## How it works
 
