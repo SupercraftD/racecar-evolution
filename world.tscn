@@ -1,0 +1,231 @@
+[gd_scene format=3 uid="uid://dxugnoyxjpngn"]
+
+[ext_resource type="Texture2D" uid="uid://du8ywe3nasxcf" path="res://assets/track.png" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://blh84usvl0do8" path="res://world.gd" id="1_fj7yv"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jm2k6"]
+a = Vector2(1, 6)
+b = Vector2(158, 4)
+
+[node name="World" type="Node2D" unique_id=908993130]
+script = ExtResource("1_fj7yv")
+
+[node name="Track" type="Sprite2D" parent="." unique_id=1992533929]
+position = Vector2(575.5, 573.5)
+scale = Vector2(1.1240236, 1.1240236)
+texture = ExtResource("1_f3sb7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1724787607]
+position = Vector2(534, 420)
+limit_left = -1152
+limit_top = -648
+limit_right = 2304
+limit_bottom = 1296
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=750284087]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=833317914]
+position = Vector2(1, -3)
+build_mode = 1
+polygon = PackedVector2Array(191, 457, 190, 243, 185, 175, 209, 120, 247, 81, 291, 62, 321, 54, 365, 55, 402, 71, 532, 166, 671, 191, 766, 202, 915, 203, 949, 205, 1042, 239, 1051, 285, 1048, 358, 1044, 378, 1013, 435, 980, 455, 947, 464, 857, 473, 767, 474, 706, 486, 662, 505, 637, 537, 627, 577, 637, 638, 657, 667, 763, 689, 881, 691, 909, 698, 989, 738, 998, 767, 996, 809, 973, 875, 930, 918, 790, 931, 486, 940, 356, 918, 266, 858, 244, 833, 214, 748, 196, 642, 192, 579)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1982220527]
+build_mode = 1
+polygon = PackedVector2Array(349, 526, 348, 435, 338, 308, 304, 186, 304, 148, 316, 139, 362, 138, 392, 169, 411, 255, 424, 265, 486, 285, 588, 291, 842, 293, 876, 302, 891, 324, 890, 354, 876, 364, 803, 384, 689, 402, 594, 427, 524, 464, 493, 507, 487, 543, 487, 636, 494, 667, 529, 703, 557, 716, 636, 727, 719, 752, 775, 768, 801, 788, 804, 809, 797, 822, 717, 838, 666, 845, 586, 855, 517, 855, 451, 832, 387, 775, 340, 683, 332, 625, 350, 600)
+
+[node name="start" type="Node2D" parent="." unique_id=1827359675]
+position = Vector2(274, 580)
+
+[node name="checkpoints" type="Node2D" parent="." unique_id=1847692733]
+
+[node name="Node2D2" type="Node2D" parent="checkpoints" unique_id=848755484]
+position = Vector2(274, 502)
+
+[node name="Node2D4" type="Node2D" parent="checkpoints" unique_id=77619619]
+position = Vector2(271, 452)
+
+[node name="Node2D6" type="Node2D" parent="checkpoints" unique_id=1302456513]
+position = Vector2(262, 400)
+
+[node name="Node2D10" type="Node2D" parent="checkpoints" unique_id=1117432535]
+position = Vector2(267, 335)
+
+[node name="Node2D12" type="Node2D" parent="checkpoints" unique_id=1676224801]
+position = Vector2(259, 267)
+
+[node name="Node2D15" type="Node2D" parent="checkpoints" unique_id=866639890]
+position = Vector2(255, 188)
+
+[node name="Node2D20" type="Node2D" parent="checkpoints" unique_id=1549290307]
+position = Vector2(283, 112)
+
+[node name="Node2D21" type="Node2D" parent="checkpoints" unique_id=1287445758]
+position = Vector2(358, 102)
+
+[node name="Node2D23" type="Node2D" parent="checkpoints" unique_id=1930249350]
+position = Vector2(408, 130)
+
+[node name="Node2D26" type="Node2D" parent="checkpoints" unique_id=589974061]
+position = Vector2(459, 187)
+
+[node name="Node2D28" type="Node2D" parent="checkpoints" unique_id=865386510]
+position = Vector2(512, 230)
+
+[node name="Node2D33" type="Node2D" parent="checkpoints" unique_id=2028034630]
+position = Vector2(613, 248)
+
+[node name="Node2D37" type="Node2D" parent="checkpoints" unique_id=674229855]
+position = Vector2(700, 251)
+
+[node name="Node2D38" type="Node2D" parent="checkpoints" unique_id=160758847]
+position = Vector2(766, 255)
+
+[node name="Node2D42" type="Node2D" parent="checkpoints" unique_id=1075039576]
+position = Vector2(852, 259)
+
+[node name="Node2D44" type="Node2D" parent="checkpoints" unique_id=1927341497]
+position = Vector2(928, 278)
+
+[node name="Node2D46" type="Node2D" parent="checkpoints" unique_id=747686633]
+position = Vector2(954, 331)
+
+[node name="Node2D48" type="Node2D" parent="checkpoints" unique_id=51407056]
+position = Vector2(930, 378)
+
+[node name="Node2D50" type="Node2D" parent="checkpoints" unique_id=512494630]
+position = Vector2(864, 415)
+
+[node name="Node2D52" type="Node2D" parent="checkpoints" unique_id=1427891930]
+position = Vector2(771, 437)
+
+[node name="Node2D57" type="Node2D" parent="checkpoints" unique_id=1866155861]
+position = Vector2(665, 462)
+
+[node name="Node2D59" type="Node2D" parent="checkpoints" unique_id=1403102112]
+position = Vector2(595, 520)
+
+[node name="Node2D61" type="Node2D" parent="checkpoints" unique_id=925326012]
+position = Vector2(578, 587)
+
+[node name="Node2D63" type="Node2D" parent="checkpoints" unique_id=1527984865]
+position = Vector2(603, 655)
+
+[node name="Node2D65" type="Node2D" parent="checkpoints" unique_id=896007041]
+position = Vector2(687, 708)
+
+[node name="Node2D68" type="Node2D" parent="checkpoints" unique_id=1864455290]
+position = Vector2(824, 766)
+
+[node name="Node2D69" type="Node2D" parent="checkpoints" unique_id=847950191]
+position = Vector2(766, 730)
+
+[node name="Node2D74" type="Node2D" parent="checkpoints" unique_id=714168117]
+position = Vector2(781, 859)
+
+[node name="Node2D77" type="Node2D" parent="checkpoints" unique_id=2019941595]
+position = Vector2(700, 890)
+
+[node name="Node2D79" type="Node2D" parent="checkpoints" unique_id=862779051]
+position = Vector2(609, 897)
+
+[node name="Node2D81" type="Node2D" parent="checkpoints" unique_id=234136851]
+position = Vector2(518, 896)
+
+[node name="Node2D84" type="Node2D" parent="checkpoints" unique_id=2033040138]
+position = Vector2(423, 869)
+
+[node name="Node2D87" type="Node2D" parent="checkpoints" unique_id=784283357]
+position = Vector2(365, 827)
+
+[node name="Node2D91" type="Node2D" parent="checkpoints" unique_id=1387494506]
+position = Vector2(311, 746)
+
+[node name="Node2D94" type="Node2D" parent="checkpoints" unique_id=1320957746]
+position = Vector2(275, 660)
+
+[node name="Node2D95" type="Node2D" parent="checkpoints" unique_id=1602697136]
+position = Vector2(275, 588)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1732999809]
+position = Vector2(191, 514)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1520027743]
+shape = SubResource("SegmentShape2D_jm2k6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1700638336]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1676663925]
+offset_left = 19.0
+offset_top = 17.0
+offset_right = 68.0
+offset_bottom = 40.0
+text = "Gen: 0"
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1252887124]
+offset_left = 186.0
+offset_top = 18.0
+offset_right = 235.0
+offset_bottom = 41.0
+text = "00:00"
+
+[node name="Label3" type="Label" parent="CanvasLayer" unique_id=179682749]
+offset_left = 12.0
+offset_top = 106.0
+offset_right = 105.0
+offset_bottom = 129.0
+text = "Best lap: 0"
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=2075762785]
+offset_left = 85.0
+offset_top = 14.0
+offset_right = 120.0
+offset_bottom = 45.0
+text = ">"
+
+[node name="CheckBox" type="CheckBox" parent="CanvasLayer" unique_id=206851970]
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 83.0
+offset_bottom = 89.0
+text = "Auto"
+
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=1553712006]
+offset_left = 994.0
+offset_top = 18.0
+offset_right = 1128.0
+offset_bottom = 57.0
+text = "Extinction event"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer" unique_id=760589584]
+offset_left = 1023.0
+offset_top = 87.0
+offset_right = 1075.0
+offset_bottom = 111.0
+selected = 3
+item_count = 8
+popup/item_0/text = "0.25x"
+popup/item_0/id = 0
+popup/item_1/text = "0.5x"
+popup/item_1/id = 1
+popup/item_2/text = "0.75x"
+popup/item_2/id = 2
+popup/item_3/text = "1x"
+popup/item_3/id = 3
+popup/item_4/text = "2x"
+popup/item_4/id = 4
+popup/item_5/text = "4x"
+popup/item_5/id = 5
+popup/item_6/text = "8x"
+popup/item_6/id = 6
+popup/item_7/text = "16x"
+popup/item_7/id = 7
+
+[node name="Timer" type="Timer" parent="." unique_id=347998400]
+one_shot = true
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="item_selected" from="CanvasLayer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

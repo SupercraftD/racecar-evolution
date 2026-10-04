@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b8tl5f0tqqbw8"]
+
+[ext_resource type="Texture2D" uid="uid://0xenow8hh1k4" path="res://assets/redyellowcar-removebg-preview.png" id="1_7822p"]
+[ext_resource type="Script" uid="uid://bjes8whe1ohot" path="res://car.gd" id="1_uoj53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wago"]
+size = Vector2(17, 26)
+
+[node name="car" type="CharacterBody2D" unique_id=792814564]
+collision_layer = 2
+script = ExtResource("1_uoj53")
+
+[node name="RedyellowcarRemovebgPreview" type="Sprite2D" parent="." unique_id=374108337]
+scale = Vector2(0.261236, 0.261236)
+texture = ExtResource("1_7822p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=236244667]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_0wago")
+
+[node name="Rays" type="Node2D" parent="." unique_id=253321643]
+
+[node name="RayCast2D" type="RayCast2D" parent="Rays" unique_id=643796930]
+target_position = Vector2(0, -142)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Rays" unique_id=1365203771]
+target_position = Vector2(-83, -90)
+
+[node name="RayCast2D5" type="RayCast2D" parent="Rays" unique_id=280471572]
+target_position = Vector2(83, -90)
+
+[node name="RayCast2D3" type="RayCast2D" parent="Rays" unique_id=53771529]
+target_position = Vector2(-105, -17)
+
+[node name="RayCast2D4" type="RayCast2D" parent="Rays" unique_id=1771631052]
+target_position = Vector2(105, -17)
