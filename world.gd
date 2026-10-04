@@ -1,7 +1,6 @@
 extends Node2D
 
 var car = preload("res://car.tscn")
-var seedcar : Car = null
 
 var gen_size = 15
 var mutation_rate = 0.2
@@ -38,24 +37,13 @@ func _physics_process(_delta):
 			body.passed_checkpt = true
 	
 	var alldead = true
-	var mostfit : Car = null
 	for car : Car in cars:
 		if not car.dead:
 			alldead=false
 			break
-		
-		if mostfit==null:
-			mostfit = car
-		elif car.passed_checkpt:
-			if not mostfit.passed_checkpt:
-				mostfit = car
-			elif car.last_checkpt > mostfit.last_checkpt:
-				mostfit = car
 	
 	if alldead:
 		$CanvasLayer/Button.disabled = false
-		seedcar = mostfit
-		
 		if $CanvasLayer/CheckBox.button_pressed:
 			_on_button_pressed()
 
@@ -65,8 +53,24 @@ func _on_button_pressed():
 		run()
 	else:
 		
-		var stweights = seedcar.throttle_weights.duplicate()
-		var sdweights = seedcar.direction_weights.duplicate()
+		var mostfit = null
+		for car in cars:
+			if mostfit==null:
+				mostfit = car
+			elif car.laps > 0:
+				if mostfit.laps == 0:
+					mostfit = car
+				elif car.bestlap < mostfit.bestlap:
+					mostfit = car
+				$CanvasLayer/Label3.text = "Best lap: "+str(mostfit.bestlap)
+			elif car.passed_checkpt:
+				if not mostfit.passed_checkpt:
+					mostfit = car
+				elif car.last_checkpt > mostfit.last_checkpt:
+					mostfit = car
+		
+		var stweights = mostfit.throttle_weights.duplicate()
+		var sdweights = mostfit.direction_weights.duplicate()
 		
 		while len(cars)>0:
 			cars.pop_front().queue_free()
@@ -103,24 +107,6 @@ func _on_button_pressed():
 
 func _on_timer_timeout():
 	$CanvasLayer/Button.disabled = false
-	var mostfit : Car = null
-	for car : Car in cars:
-		
-		if mostfit==null:
-			mostfit = car
-		elif car.laps > 0:
-			if mostfit.laps == 0:
-				mostfit = car
-			elif car.bestlap < mostfit.bestlap:
-				mostfit = car
-			$CanvasLayer/Label3.text = "Best lap: "+str(mostfit.bestlap)
-		elif car.passed_checkpt:
-			if not mostfit.passed_checkpt:
-				mostfit = car
-			elif car.last_checkpt > mostfit.last_checkpt:
-				mostfit = car
-	
-	seedcar = mostfit
 
 
 func _on_button_2_pressed():

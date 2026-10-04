@@ -89,8 +89,6 @@ func _physics_process(delta):
 	time+=delta
 	time_since_progress += delta
 	if time_since_progress >= 3 and not dead:
-		if laps>0:
-			print("failed but shouldve lapped")
 		dead=true
 
 	if dead:return
@@ -114,7 +112,6 @@ func _physics_process(delta):
 		# Check if this was the final checkpoint required to complete the lap
 		if next_checkpt_index == 0 and passed_checkpts[1]:
 			laps += 1
-			print("lapped! Total laps: ", laps)
 			
 			if time < bestlap or bestlap == 0:
 				bestlap = time
