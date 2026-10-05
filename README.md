@@ -39,7 +39,7 @@ Some constants are designed to be modified freely.
 4. `direction_steps` Controls the direction change multiplier
 
 # Usage
-Play with it online at:
+Play with it online [on github pages](https://supercraftd.github.io/racecar-evolution/)
 
 Or clone the repository and open with Godot 4.7.1
 
